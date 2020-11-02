@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nousu portal rekisteröinti</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    img {
+        margin: 1rem;
+    }
+
+    div {
+        margin: 1rem auto;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form {
+        width: 200px;
+        margin: 1rem auto;
+        background-color: #ddd;
+        text-align: center;
+        padding: 1rem;
+        border: #1D1E21 1.5px solid;
+        background-color: #8CCAC8;
+    }
+
+    form input {
+        margin: 1rem auto;
+        padding: .5rem;
+        width: 100%;
+    }
+
+    form input.empty {
+        border: 1.5px solid red;
+    }
+
+    form button {
+    margin: 10px auto;
+    display: block;
+    background-color: #1D1E21;
+    padding: .4rem 2rem;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #1D1E21;
+        color: #fff;
+        transition: .5s;
+    }
+</style>
+<body>
+    <img src="https://static.wixstatic.com/media/5d9f53_5838184372674a009dbaa6913a84023c~mv2.png/v1/crop/x_0,y_0,w_597,h_611/fill/w_120,h_123,al_c,q_85,usm_0.66_1.00_0.01/logo_ilman_tekstia.webp" alt="LOGO">
+
+    <div>
+        <form id="register" class="hide" action="/register" method="POST">
+            <legend>Rekisteröidy</legend>
+            <input type="text" placeholder="Käyttäjätunnus" name="username" required>
+            <input type="password" placeholder="Salasana" name="password" required>
+            <input type="password" placeholder="Salasana" name="conPassword" required>
+            <button type="submit" value="register">Rekisteröidy</button>
+        </form>
+    </div>
+    <a href="/nousu.portal">Kirjaudu nousu.portal</a>
+</body>
+</html>

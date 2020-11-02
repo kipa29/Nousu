@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        text-align: center;
+    }
+
+    div.topbar {
+        text-align: right;
+        padding: 1rem;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    div.topbar strong {
+        font-size: 1.2rem;
+    }
+
+    table {
+        margin: 1rem auto;
+        max-width: 1100px;
+        width: 100%;
+        border-collapse: collapse;
+        padding: 1rem;
+    }
+
+    td, th {
+        border: 1px solid #111;
+        padding: .5rem;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    table th {
+        background-color: #aaa;
+    }
+
+    form {
+        margin: 1rem auto;
+        max-width: 1100px;
+        padding: 1rem;
+    }
+
+    form button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        opacity: .8;
+    }
+
+    form button:hover {
+        opacity: 1;
+    }
+</style>
+<body>
+    <div class="topbar">
+        Käyttäjä: <strong><%- username %></strong>
+        <br>
+        <a href="/logout">Kirjaudu ulos</a>
+    </div>
+    <h2>Tilaukset:</h2>
+    
+        <table>
+            <tr>
+                <th>Yhteyshenkilö</th>
+                <th>Yhteystiedot</th>
+                <th>Nettisivut</th>
+                <th>Valokuvaus</th>
+                <th>Markkinointiassistentti</th>
+                <th>Viesti</th>
+                <th>Päivämäärä</th>
+                <th>Poista</th>
+            </tr>  
+        
+            <% data.forEach(function(data) { %>
+                <tr>
+                    <td><%- data.yhteyshenkilo %></td>
+                    <td><%- data.yhteystiedot %></td>
+                    <td><%- data.nettisivut %></td>
+                    <td><%- data.valokuvaus %></td>
+                    <td><%- data.markkinointiassistentti %></td>
+                    <td><%- data.viesti %></td>
+                    <td><%- data.date.toDateString() %></td>
+                    <td>
+                        <form action="/delete_data" method="POST">
+                            <input style="display: none;" type="text" name="id" value="<%- data.id %>">
+                            <button type="submit">Poista</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </table>
+</body>
+</html>

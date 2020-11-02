@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <nav>
+        <%- include('partials/nav'); %>
+    </nav>
+
+    <form action="/contact" method="POST">
+        <h1>Nousu auttaa näkymään</h1>
+        <p>Lähetä tarjouspyyntö lomakkeen kautta ja olemme sinuun yhteydessä pian.</p>
+        
+        <div>
+            <input type="checkbox" name="nettisivut" id="nettisivut" value="1">
+             <label for="nettisivut">Nettisivut</label> 
+         </div>
+        <div>
+            <input type="checkbox" name="valokuvaus" id="valokuvaus" value="1">
+            <label for="valokuvaus">Valokuvauspalvelut</label>
+        </div>
+        <div>
+           <input type="checkbox" name="assistentti" id="assistentti" value="1">
+            <label for="assistentti">Markkinointiassistenttipalvelut</label> 
+        </div>
+        <textarea name="viesti" id="" cols="30" rows="10" maxlength="1000" placeholder="Jätä viesti..."></textarea>
+        <div class="contact">
+            <input type="text" placeholder="Nimi/Yrityksen nimi*" name="contactName" required>
+            <input type="text" placeholder="Yhteystiedot*" name="contact" required>
+        </div>
+        <button type="submit" value="submit"><strong>Lähetä</strong></button>
+    </form>
+
+    <h2>Alle on koottu palveluja hintoineen.</h2>
+
+    <main>
+        <section class="contactSectionNettisivut">
+            <h3>Nettisivut yritykselle<br>alkaen 500€ + ALV.</h3>
+            <p>Aloitusmaksu 500€ + alv. sis. yhden etusivun. <br> <a href="http://www.etelasuomenparketti.fi/">Katso esimerkki</a></p>
+            
+            <p>Lisäsivut  + 100€/ sivu</p>
+
+            <p><strong>+ Blogi 300€ + alv.</strong></p>
+            <p><strong>+ Verkkokauppa 300€ + alv.</strong></p>
+            <p><strong>+ Ajanvarauskalenterit ja upotukset 300€ + alv.</strong></p>
+            <p><strong>Muut kulut, joita tulee nettisivujen ylläpidosta</strong></p>
+
+            <p>Domain (www.yritys.fi) 9€/ vuosi <br>
+                Nettisivujen kuukausi maksu on 10-30€/ kk</p>
+
+                <p><strong>ALKUKARTOITUS PALAVERI JA KOULUTUS KUULUU HINTAAN!</strong></p>
+                <p class="koulutus">Koulutan sivujesi käyttöön. Valitse henkilökohtainen tapaaminen tai puhelimessa tapahtuva koulutus 60 min. Toimialueena pääkaupunkiseutu.</p>
+        </section>
+
+        <section class="contactSectionValokuvaus">
+            <h3>Valokuvauspalvelut</h3>
+            <p>Mallikansiot</p>
+            <p>Tuotekuvat</p>
+            <p>Henkilökunnan kuvaukset</p>
+            <p>Yritysesittely-kuvaus</p>
+
+            <h4>Hinnat</h4>
+            <h5>Kuvaukset studiossa</h5>
+            <p>30 min/ 120€ (henkilökuvaus studiossa)
+                <br>
+                1h/ 180€
+                <br>
+                2h/ 290€</p>
+                <br>
+            <p>Kuvien editointi 10€ kpl 
+                <br>
+                (sis. Rajaukset, valotus,
+                <br>
+                 mustavalkokuvat ja some kuvakoko)</p>
+
+            <h5>Kuvaukset valinnaisessa paikassa/ yritysesittely:</h5>
+            <p>1h/ 290€
+                <br>
+                3h/ 540€
+                <br>
+                8h/ 1290€</p>
+                <br>
+            <p>Kuvien editointi 10€ kpl. (Ei kauneus/ muotikuvat) <br>
+                (Kauneus ja muotikuvien editointi tarjouksella erikseen)</p>
+            <br>
+            <p>Saat kaikki hyvät kuvat JPG tiedostoina yrityksen käyttöön ja
+                <br>
+                voit käyttää kuvia kaikissa yrityksen kanavissa, sekä printtituotteissa.
+                <br>
+                Voit ostaa kuvien muokkausoikeudet 20€/kuva.</p>
+                <br>
+                <p><strong>Kysy tarjous nyt</strong></p>
+                <br>
+                <p>Studio Roihuvuoressa</p>
+        </section>
+
+        <section class="contactSectionAssistentti">
+            <h3>Markkinointiassistentti-palvelut</h3>
+            <p>Kuukausilaskutuksella yritykselle oma markkinointiassistentti. Riskitön palvelu, joka säästää kuluja.
+                <br>
+                Räätälöidään yritykselle pitkän tähtäimen suunnitelma, joka pitää sisällään kaiken
+                <br>
+                verkkosivujen päivityksestä, somesisällön tuotantoon ja markkinointiin.</p>
+            <br>
+            <p>Alkaen 590€/kk + ALV</p>
+            <strong>Kysy lisää ja pyydä tarjous</strong>
+        </section>
+    </main>
+
+    <footer>
+        <%- include('partials/footer'); %>
+    </footer>
+
+<script>
+    
+</script>
+</body>
+</html>
